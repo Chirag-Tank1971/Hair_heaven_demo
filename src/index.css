@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased font-sans;
+    background-color: theme('colors.heaven.cream');
+    color: theme('colors.heaven.ink');
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.heaven.pink'),
+      theme('colors.heaven.rose'),
+      theme('colors.heaven.purple')
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-gold {
+    background-image: linear-gradient(
+      to right,
+      theme('colors.amber.500'),
+      theme('colors.heaven.gold'),
+      theme('colors.heaven.pink')
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass {
+    @apply border border-black/5 bg-white/70 shadow-glass backdrop-blur-xl;
+  }
+  .glass-strong {
+    @apply border border-black/10 bg-white/85 shadow-glass backdrop-blur-2xl;
+  }
+}
